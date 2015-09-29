@@ -1,0 +1,41 @@
+body { 
+width: 1000px; 
+height: 600px; 
+background-image: url(images/bg3.png);
+background-position: 0px 0px;
+background-repeat: repeat-x;
+background-size:900px 700px;
+animation-timing-function: linear; 
+animation-iteration-count: infinite;
+animation-name: movebackground;
+animation-duration: 2s;
+}
+
+@keyframes movebackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+
+#plane {
+width:100px;
+height:100px;
+position: relative;
+background-image: url(images/airplane.gif);
+background-size:100px 100px;
+animation-timing-function: linear; 
+animation-iteration-count: infinite;
+animation-name: moveplane;
+animation-duration: 20s;
+animation-play-state: paused;
+}
+
+#plane:target {
+	animation-play-state: running;
+}
+
+@keyframes moveplane {
+    0%   {top: 40%; left:20%;}
+    25%  {top: 5%; left:20%;}
+    75%  {top: 5%; left:20%;}
+    100% {top: 5%; left:20%;}
+}
